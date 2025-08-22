@@ -11,4 +11,6 @@ jobs:
         run: |
           which terraform || echo "terraform not found"
           terraform -version || echo "terraform not installed"
+          which go || echo "Go not found"
+          go version || echo "Go not installed"
 
