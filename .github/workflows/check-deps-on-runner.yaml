@@ -1,13 +1,12 @@
-name: Check Terraform on ubuntu-22.04
+name: Check Deps on ubuntu-22.04
 
-on:
-  workflow_dispatch:
+on: [push]
 
 jobs:
   check:
     runs-on: ubuntu-22.04
     steps:
-      - name: Check Terraform availability
+      - name: Check Deps availability
         run: |
           which terraform || echo "terraform not found"
           terraform -version || echo "terraform not installed"
